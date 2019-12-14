@@ -11,7 +11,7 @@ class FuelCounterUpperTest {
 
 
     @Test
-    public void check_em(){
+    public void check_em_day_1_1(){
         assertEquals(654, new FuelCounterUpper(List.of("1969")).getFuelRequirement());
         assertEquals(33583, new FuelCounterUpper(List.of("100756")).getFuelRequirement());
         assertEquals(654+33583, new FuelCounterUpper(List.of("100756", "1969")).getFuelRequirement());
