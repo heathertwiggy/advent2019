@@ -1,13 +1,11 @@
 package computer;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public enum Operation {
+public enum Opcode {
     ADD(1){
         @Override
         Integer operation(Integer a, Integer b) {
@@ -27,14 +25,14 @@ public enum Operation {
         }
     };
 
-    private static Map<Integer, Operation> ops = Arrays.stream(values())
-            .collect(Collectors.toMap(Operation::getOpCode, Function.identity()));
+    private static Map<Integer, Opcode> ops = Arrays.stream(values())
+            .collect(Collectors.toMap(Opcode::getOpCode, Function.identity()));
 
     private int opCode;
 
     abstract Integer operation(Integer a, Integer b);
 
-    Operation(int opCode) {
+    Opcode(int opCode) {
         this.opCode = opCode;
     }
 
@@ -42,7 +40,7 @@ public enum Operation {
         return opCode;
     }
 
-    public static Operation op(Integer i){
+    public static Opcode op(Integer i){
         return ops.getOrDefault(i, TERMINATE);
     }
 }

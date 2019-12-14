@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09c5e15a-b8a0-4e0e-84e2-7d27b56f7f67" name="Default" comment="DAY-1.2 solved!">
-      <change afterPath="$PROJECT_DIR$/resources/d2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/computer/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/computer/ShipComputer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/days/Day2.java" afterDir="false" />
+    <list default="true" id="09c5e15a-b8a0-4e0e-84e2-7d27b56f7f67" name="Default" comment="DAY-2.1 solved">
+      <change afterPath="$PROJECT_DIR$/src/util/Pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/FuelCounterUpper2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/FuelCounterUpper2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/days/Dayable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/days/Dayable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/Opcode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/ShipComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/ShipComputer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/days/Day2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/days/Day2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +58,14 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="computer" />
       <recent name="days" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="util" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Runner">
@@ -188,7 +189,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1576342078003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="DAY-2.1 solved">
+      <created>1576366210395</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1576366210395</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,37 +215,42 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DAY-1.1 before hitting task 2" />
     <MESSAGE value="DAY-1.2 solved!" />
-    <option name="LAST_COMMIT_MESSAGE" value="DAY-1.2 solved!" />
+    <MESSAGE value="DAY-2.1 solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAY-2.1 solved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="971" y="419" width="1200" height="800" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576341355869">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
     <state x="971" y="419" width="1200" height="800" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576341355869" />
-    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser" timestamp="1576342912273">
+    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser" timestamp="1576367134822">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576342912273" />
-    <state x="1238" y="417" key="CommitChangelistDialog2" timestamp="1576342077518">
+    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367134822" />
+    <state x="1451" y="596" width="398" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576366349001">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state x="1238" y="417" key="CommitChangelistDialog2/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576342077518" />
-    <state width="1174" height="478" key="GridCell.Tab.0.bottom" timestamp="1576344797683">
+    <state x="1451" y="596" width="398" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576366349001" />
+    <state x="1238" y="417" key="CommitChangelistDialog2" timestamp="1576366209905">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1174" height="478" key="GridCell.Tab.0.bottom/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576344797683" />
-    <state width="1174" height="478" key="GridCell.Tab.0.center" timestamp="1576344797682">
+    <state x="1238" y="417" key="CommitChangelistDialog2/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576366209905" />
+    <state width="1220" height="478" key="GridCell.Tab.0.bottom" timestamp="1576367368018">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1174" height="478" key="GridCell.Tab.0.center/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576344797682" />
-    <state width="1174" height="478" key="GridCell.Tab.0.left" timestamp="1576344797682">
+    <state width="1220" height="478" key="GridCell.Tab.0.bottom/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
+    <state width="1220" height="478" key="GridCell.Tab.0.center" timestamp="1576367368018">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1174" height="478" key="GridCell.Tab.0.left/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576344797682" />
-    <state width="1174" height="478" key="GridCell.Tab.0.right" timestamp="1576344797682">
+    <state width="1220" height="478" key="GridCell.Tab.0.center/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
+    <state width="1220" height="478" key="GridCell.Tab.0.left" timestamp="1576367368018">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1174" height="478" key="GridCell.Tab.0.right/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576344797682" />
+    <state width="1220" height="478" key="GridCell.Tab.0.left/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
+    <state width="1220" height="478" key="GridCell.Tab.0.right" timestamp="1576367368018">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="1220" height="478" key="GridCell.Tab.0.right/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
     <state x="1275" y="720" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576340035687">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>

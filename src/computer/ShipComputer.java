@@ -8,54 +8,67 @@ public class ShipComputer {
 
     String rawProgram;
     int[] program;
-    List<Chunk> executionHistory = new ArrayList<>(64);
+    List<Instruction> executionHistory = new ArrayList<>(64);
+    List<List<Instruction>> executionHistoryHistory = new ArrayList<>(100);
 
     public ShipComputer(String rawProgram) {
-        this.rawProgram = rawProgram;
-        this.program = Arrays.stream(rawProgram.split(",")).mapToInt(Integer::valueOf).toArray();
+        loadProgram(rawProgram);
     }
 
-    public int compute(){
-        confabulate();
+    public void loadProgram(String rawProgram){
+        this.rawProgram = rawProgram;
+        reloadProgram();
+    }
 
-        int position = 0;
-        Chunk current = read(0);
+    public void reloadProgram(){
+        this.program = Arrays.stream(rawProgram.split(",")).mapToInt(Integer::valueOf).toArray();
+        if (!executionHistory.isEmpty()){
+            executionHistoryHistory.add(new ArrayList<>(executionHistory));
+            executionHistory.clear();
+        }
+    }
 
-        while (current.op != Operation.TERMINATE) {
+    public int compute(int noun, int verb){
+        setInputFlags(noun, verb);
+
+        int pc = 0;
+        Instruction current = read(0);
+
+        while (current.op != Opcode.TERMINATE) {
             int result = current.compute();
             program[current.target] = result;
-            position += 4;
-            current = read(position);
+            pc += 4;
+            current = read(pc);
         }
 
         return program[0];
     }
 
-    private Chunk read(int position){
-        Chunk next = new Chunk(position);
+    private Instruction read(int position){
+        Instruction next = new Instruction(position);
         executionHistory.add(next);
         return next;
     }
 
-    private void confabulate() {
-        program[1] = 12;
-        program[2] = 2;
+    private void setInputFlags(int pos1, int pos2) {
+        program[1] = pos1;
+        program[2] = pos2;
     }
 
-    class Chunk {
+    class Instruction {
         static final int length = 4;
 
         final int startPosition;
-        final Operation op;
+        final Opcode op;
         final int addr1;
         final int addr2;
         final int target;
 
         int result;
 
-        public Chunk(int position) {
+        public Instruction(int position) {
             startPosition = position;
-            op = Operation.op(program[position]);
+            op = Opcode.op(program[position]);
             addr1 = program[position+1];
             addr2 = program[position+2];
             target = program[position+3];
