@@ -1,6 +1,7 @@
 package main;
 
 import days.Day1;
+import days.Day2;
 
 import java.util.stream.Stream;
 
@@ -8,6 +9,7 @@ public class Runner {
 
     public static void main(String[] args) {
         Stream.of(
+                new Day2(),
                 new Day1()
         ).forEach(it -> {
             System.out.println("#Day" + it.day());

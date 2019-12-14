@@ -16,6 +16,7 @@ public interface Dayable {
     default String correctResultOne(){
         return "dunno 1";
     };
+
     default String correctResultTwo(){
         return "dunno 2";
     };

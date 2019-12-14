@@ -19,7 +19,7 @@ public class FuelCounterUpper2 extends FuelCounterUpper {
         return intMasses()
                 .flatMap(i -> IntStream.iterate(i, x -> x > 0, mass2Fuel))
                 .sum()
-                - intMasses().sum(); // <- well this was embarassing, not sure how to avoid including first element in the iteration. Oh well.
+                - intMasses().sum(); // <- well this was embarrassing, not sure how to avoid including first element in the iteration. Oh well.
 
         // return intMasses().flatMap(i -> fuels(i).stream().mapToInt(x->x)).sum();
     }
