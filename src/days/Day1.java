@@ -1,7 +1,7 @@
 package days;
 
-import component.FuelCounterUpper;
-import component.FuelCounterUpper2;
+import component.fuel.FuelCounterUpper;
+import component.fuel.FuelCounterUpper2;
 import util.Input;
 
 public class Day1 implements Dayable {

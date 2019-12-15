@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09c5e15a-b8a0-4e0e-84e2-7d27b56f7f67" name="Default" comment="DAY-2.1 solved">
-      <change afterPath="$PROJECT_DIR$/src/util/Pair.java" afterDir="false" />
+    <list default="true" id="09c5e15a-b8a0-4e0e-84e2-7d27b56f7f67" name="Default" comment="DAY-2.2 solved&#10;&#10;decided to just mutate the program. Can use git to look at old state instead. &#10;Speaking of mutations, made computer reusable and more state-bearing than before. We'll see how that goes, but it seems like this was the intent of the framers.">
+      <change afterPath="$PROJECT_DIR$/resources/d3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/wires/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/wires/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/wires/Step.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/wires/Wire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/wires/WireIntersector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/days/Day3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/component/wires/PointTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/component/wires/WireIntersectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computer/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/Opcode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computer/ShipComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/ShipComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/days/Day2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/days/Day2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/FuelCounterUpper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/fuel/FuelCounterUpper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/FuelCounterUpper2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/fuel/FuelCounterUpper2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/days/Day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/days/Day1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/component/FuelCounterUpper2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/component/FuelCounterUpper2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/component/FuelCounterUpperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/component/FuelCounterUpperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -41,6 +53,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,13 +66,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="component.wires" />
       <recent name="component" />
       <recent name="util" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="computer" />
       <recent name="days" />
+      <recent name="computer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\src\advent2019\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -96,7 +113,7 @@
       <module name="advent2019" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="component.*" />
+          <option name="PATTERN" value="component.wires.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,7 +130,7 @@
       <module name="advent2019" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="component.*" />
+          <option name="PATTERN" value="component.wires.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,6 +138,22 @@
       <option name="MAIN_CLASS_NAME" value="component.FuelCounterUpperTest" />
       <option name="METHOD_NAME" value="check_em" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WireIntersectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="component.wires.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="component.wires" />
+      <option name="MAIN_CLASS_NAME" value="component.wires.WireIntersectorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,6 +178,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.WireIntersectorTest" />
         <item itemvalue="JUnit.FuelCounterUpper2Test.check_em_day_1_2" />
         <item itemvalue="JUnit.FuelCounterUpperTest.check_em" />
       </list>
@@ -195,7 +229,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1576366210395</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="DAY-2.2 solved&#10;&#10;decided to just mutate the program. Can use git to look at old state instead. &#10;Speaking of mutations, made computer reusable and more state-bearing than before. We'll see how that goes, but it seems like this was the intent of the framers.">
+      <created>1576367426586</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1576367426586</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,57 +256,90 @@
     <MESSAGE value="DAY-1.1 before hitting task 2" />
     <MESSAGE value="DAY-1.2 solved!" />
     <MESSAGE value="DAY-2.1 solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="DAY-2.1 solved" />
+    <MESSAGE value="DAY-2.2 solved&#10;&#10;decided to just mutate the program. Can use git to look at old state instead. &#10;Speaking of mutations, made computer reusable and more state-bearing than before. We'll see how that goes, but it seems like this was the intent of the framers." />
+    <option name="LAST_COMMIT_MESSAGE" value="DAY-2.2 solved&#10;&#10;decided to just mutate the program. Can use git to look at old state instead. &#10;Speaking of mutations, made computer reusable and more state-bearing than before. We'll see how that goes, but it seems like this was the intent of the framers." />
   </component>
   <component name="WindowStateProjectService">
     <state x="971" y="419" width="1200" height="800" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576341355869">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
     <state x="971" y="419" width="1200" height="800" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576341355869" />
-    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser" timestamp="1576367134822">
+    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser" timestamp="1576370227381">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367134822" />
+    <state x="1376" y="528" key="#com.intellij.ide.util.MemberChooser/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576370227381" />
     <state x="1451" y="596" width="398" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576366349001">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
     <state x="1451" y="596" width="398" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576366349001" />
-    <state x="1238" y="417" key="CommitChangelistDialog2" timestamp="1576366209905">
+    <state x="1341" y="204" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576369570131">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state x="1238" y="417" key="CommitChangelistDialog2/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576366209905" />
-    <state width="1220" height="478" key="GridCell.Tab.0.bottom" timestamp="1576367368018">
+    <state x="1341" y="204" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576369570131" />
+    <state x="1238" y="417" key="CommitChangelistDialog2" timestamp="1576367426047">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1220" height="478" key="GridCell.Tab.0.bottom/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
-    <state width="1220" height="478" key="GridCell.Tab.0.center" timestamp="1576367368018">
+    <state x="1238" y="417" key="CommitChangelistDialog2/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367426047" />
+    <state width="1655" height="478" key="GridCell.Tab.0.bottom" timestamp="1576374086882">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1220" height="478" key="GridCell.Tab.0.center/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
-    <state width="1220" height="478" key="GridCell.Tab.0.left" timestamp="1576367368018">
+    <state width="1655" height="478" key="GridCell.Tab.0.bottom/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576374086882" />
+    <state width="1655" height="478" key="GridCell.Tab.0.center" timestamp="1576374086882">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1220" height="478" key="GridCell.Tab.0.left/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
-    <state width="1220" height="478" key="GridCell.Tab.0.right" timestamp="1576367368018">
+    <state width="1655" height="478" key="GridCell.Tab.0.center/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576374086882" />
+    <state width="1655" height="478" key="GridCell.Tab.0.left" timestamp="1576374086882">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state width="1220" height="478" key="GridCell.Tab.0.right/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576367368018" />
+    <state width="1655" height="478" key="GridCell.Tab.0.left/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576374086882" />
+    <state width="1655" height="478" key="GridCell.Tab.0.right" timestamp="1576374086882">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="1655" height="478" key="GridCell.Tab.0.right/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576374086882" />
+    <state width="1214" height="507" key="GridCell.Tab.1.bottom" timestamp="1576371575520">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="1214" height="507" key="GridCell.Tab.1.bottom/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371575520" />
+    <state width="1214" height="507" key="GridCell.Tab.1.center" timestamp="1576371575520">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="1214" height="507" key="GridCell.Tab.1.center/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371575520" />
+    <state width="1214" height="507" key="GridCell.Tab.1.left" timestamp="1576371575520">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="1214" height="507" key="GridCell.Tab.1.left/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371575520" />
+    <state width="1214" height="507" key="GridCell.Tab.1.right" timestamp="1576371575520">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="1214" height="507" key="GridCell.Tab.1.right/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371575520" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1576368845222">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576368845222" />
     <state x="1275" y="720" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1576340035687">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
     <state x="1275" y="720" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576340035687" />
-    <state x="1342" y="538" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576340704917">
+    <state x="865" y="586" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576371537796">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state x="1342" y="538" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576340704917" />
+    <state x="865" y="586" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371537796" />
+    <state x="1209" y="462" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1576371142267">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state x="1209" y="462" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371142267" />
+    <state x="141" y="207" width="956" height="930" key="dock-window-1" timestamp="1576370470575">
+      <screen x="0" y="0" width="2282" height="1440" />
+    </state>
+    <state x="141" y="207" width="956" height="930" key="dock-window-1/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576370470575" />
     <state x="1328" y="400" width="586" height="478" key="find.popup" timestamp="1576342548966">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
     <state x="1328" y="400" width="586" height="478" key="find.popup/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576342548966" />
-    <state x="1227" y="392" key="run.anything.popup" timestamp="1576340432634">
+    <state x="1227" y="392" width="672" height="677" key="run.anything.popup" timestamp="1576371847079">
       <screen x="0" y="0" width="2282" height="1440" />
     </state>
-    <state x="1227" y="392" key="run.anything.popup/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576340432634" />
+    <state x="1227" y="392" width="672" height="677" key="run.anything.popup/0.0.2282.1440/2560.0.2560.1410@0.0.2282.1440" timestamp="1576371847079" />
   </component>
   <component name="masterDetails">
     <states>
